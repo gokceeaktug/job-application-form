@@ -1,0 +1,262 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css" integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">İş Başvuru Formu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#kisisel">Kişisel Bilgiler</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">İletişim Bilgileri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#education">Eğitim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#job">Deneyim</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </div>
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-md-2" >
+                <h3 id="kisisel">Kişisel Bilgiler*</h3>
+                <input type="text" id="ad" placeholder="Adınızı giriniz..."> 
+                <input type="text" id="soyadi" placeholder="Soyadınızı giriniz...">
+                <label for="dogum"></label>
+                <input type="date" id="dogum" name="dogum" placeholder="Doğum tarihinizi giriniz..."><br>
+                <input type="number"maxlength="13" id="tc" placeholder="TC Kimlik numaranızı giriniz...">
+                  </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-2">
+                    <h5 id="cinsiyet">Cinsiyet Bilgisi</h5>
+                    <form method="post" action="/kontrol/onay">
+                            <input type="radio" name="favori" value="bay" class="radio"> Bay<br>
+                            <input type="radio" name="favori" value="bayan" class="radio"> Bayan<br>      
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <h5 id="medeni">Medeni Durumu</h5>
+                     <form method="post" action="/kontrol/onay">
+                        <input type="radio" name="favori" value="evli" class="radio"> Evli<br>
+                        <input type="radio" name="favori" value="bekar"class="radio"> Bekar<br>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <h5 id="asker">Askerlik Durumu</h5>
+                    <form method="post" action="/kontrol/onay">
+                        <input type="radio" name="favori" value="muaf"class="radio"> Muaf<br>
+                        <input type="radio" name="favori" value="tecilli"class="radio"> Tecilli<br>
+                        <input type="radio" name="favori" value="tamamlandı"class="radio"> Tamamlandı<br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- iletişim bilgileri girilecek -->
+   
+    <div class="container" id="contact">
+        <h4> İletişim Bilgileri</h4>
+        
+        <div class="row">
+            <div class="col-md-2">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="col-md-2">  
+                <input class="mail" type="email" placeholder="Eposta"></div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-phone"></i></div>
+                <div class="col-md-2"> <input class="number" type="number" placeholder="Telefon"></div>
+            </div>
+           <div class="row">
+               <div class="col-md-2">
+                   <h5>Şehir seçiniz:</h5>
+            
+                <div class="dropdown">
+                    <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Şehir seçiniz:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li class="dropdown-item" ><a href="">Adana</a> </li>
+                      <li class="dropdown-item" >Adıyaman</li>
+                      <li class="dropdown-item" >Afyonkarahisar</li>
+                      <li class="dropdown-item" >Ağrı</li>
+                      <li class="dropdown-item" >Aksaray</li>
+                      <li class="dropdown-item" >Amasya</li>
+                      <li class="dropdown-item" >Ankara</li>
+                      <li class="dropdown-item" >Antalya</li>
+                      <li class="dropdown-item" >Ardahan</li>
+                      <li class="dropdown-item" >Artvin</li>
+                      <li class="dropdown-item" >Aydın</li>
+                      <li class="dropdown-item" >Balıkesir</li>
+                      <li class="dropdown-item" >Bartın</li>
+                      <li class="dropdown-item" >Batman</li>
+                      <li class="dropdown-item" >Bayburt</li>
+                      <li class="dropdown-item" >Bilecik</li>
+                      <li class="dropdown-item" >Bingöl</li>
+                      <li class="dropdown-item" >Bitlis</li>
+                      <li class="dropdown-item" >Bolu</li>
+                      <li class="dropdown-item" >Burdur</li>
+                      <li class="dropdown-item" >Bursa</li>
+                      <li class="dropdown-item" >Çanakkale</li>
+                      <li class="dropdown-item" >Çankırı</li>
+                      <li class="dropdown-item" >Çorum</li>
+                      <li class="dropdown-item" >Denizli</li>
+                      <li class="dropdown-item" >Diyarbakır</li>
+                      <li class="dropdown-item" >Düzce</li>
+                      <li class="dropdown-item" >Edirne</li>
+                      <li class="dropdown-item" >Elâzığ</li>
+                      <li class="dropdown-item" >Erzincan</li>
+                      <li class="dropdown-item" >Erzurum</li>
+                      <li class="dropdown-item" >Eskişehir</li>
+                      <li class="dropdown-item" >Gaziantep</li>
+                      <li class="dropdown-item" >Giresun</li>
+                      <li class="dropdown-item" >Gümüşhane</li>
+                      <li class="dropdown-item" >Hakkâri</li>
+                      <li class="dropdown-item" >Hatay</li>
+                      <li class="dropdown-item" >Iğdır</li>
+                      <li class="dropdown-item" >Isparta</li>
+                      <li class="dropdown-item" >İstanbul</li>
+                      <li class="dropdown-item" >İzmir</li>
+                      <li class="dropdown-item" >Kahramanmaraş</li>
+                      <li class="dropdown-item" >Karabük</li>
+                      <li class="dropdown-item" >Karaman</li>
+                      <li class="dropdown-item" >Kars</li>
+                      <li class="dropdown-item" >Kastamonu </li>
+                      <li class="dropdown-item" >Kayseri</li>
+                      <li class="dropdown-item" >Kırıkkale</li>
+                      <li class="dropdown-item" >Kırklareli</li>
+                      <li class="dropdown-item" >Kırşehir</li>
+                      <li class="dropdown-item" >Kilis</li>
+                      <li class="dropdown-item" >Kocaeli</li>
+                      <li class="dropdown-item" >Konya</li>
+                      <li class="dropdown-item" >Kütahya</li>
+                      <li class="dropdown-item" >Malatya</li>
+                      <li class="dropdown-item" >Manisa</li>
+                      <li class="dropdown-item" >Mardin</li>
+                      <li class="dropdown-item" >Mersin</li>
+                      <li class="dropdown-item" >Muğla</li>
+                      <li class="dropdown-item" >Muş</li>
+                      <li class="dropdown-item" >Nevşehir</li>
+                      <li class="dropdown-item" >Niğde</li>
+                      <li class="dropdown-item" >Ordu</li>
+                      <li class="dropdown-item" >Osmaniye</li>
+                      <li class="dropdown-item" >Rize</li>
+                      <li class="dropdown-item" >Sakarya</li>
+                      <li class="dropdown-item" >Samsun</li>
+                      <li class="dropdown-item" >Siirt</li>
+                      <li class="dropdown-item" >Sinop</li>
+                      <li class="dropdown-item" >Sivas</li>
+                      <li class="dropdown-item" >Şanlıurfa</li>
+                      <li class="dropdown-item" >Şırnak</li>
+                      <li class="dropdown-item" >Tekirdağ</li>
+                      <li class="dropdown-item" >Tokat</li>
+                      <li class="dropdown-item" >Trabzon</li>
+                      <li class="dropdown-item" >Tunceli</li>
+                      <li class="dropdown-item" >Uşak</li>
+                      <li class="dropdown-item" >Van</li>
+                      <li class="dropdown-item" >Yalova</li>
+                      <li class="dropdown-item" >Yozgat</li>
+                      <li class="dropdown-item" >Zonguldak</li>
+                    </div>
+
+                  </div>
+               </div>
+           </div>
+        
+            </div> 
+            <div class="container" id="education">
+                <div class="row">
+                    <div class="col-md-2" >
+                        <h4>Eğitim Bilgileri *</h4>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Eğitim Seviyesini Giriniz : 
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li class="dropdown-item" >İlköğretim </li>
+                              <li class="dropdown-item" >Lise</li>
+                              <li class="dropdown-item" >Önlisans</li>
+                              <li class="dropdown-item" >Lisans</li>
+                              <li class="dropdown-item" >Yüksek Lisans</li>
+                              <li class="dropdown-item" >Diğer</li>
+                              
+                         
+                            </div>
+        
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <input type="text" placeholder="Okul adınızı giriniz:">
+                        </div>
+                    <div class="col-md-3">Başlangıç Tarihi
+                    </div>
+                    <div class="col-md-2">
+                        <input type="date" placeholder="Başlangıç Tarihi">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"> </div>
+                    <div class="col-md-3"> Bitiş Tarihi</div> 
+                    <div class="col-md-2"> <input type="date" placeholder="Bitiş Tarihi"></div>
+                </div>
+              
+            </div>
+            <div class="container" id="job">
+                <div class="row">
+                        <h4>Deneyim Bilgilerini Giriniz*</h4>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-2"><input type="text" placeholder="Pozisyon:"> </div>
+                    <div class="col-md-3">Başlangıç Tarihi</div>
+                    <div class="col-md-2"><input type="date" placeholder="Başlangıç Tarihi"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"> <div class="col-md-2">
+                        <input type="text" placeholder="Şirket Adını Giriniz:">
+                        </div></div>
+                    <div class="col-md-3">Bitiş Tarihi
+                    </div>
+                    <div class="col-md-2">
+                        <input type="date" placeholder="Başlangıç Tarihi">
+                    </div>
+                </div>
+                <h6>Formu kaydediniz</h6>
+                <button class="btn btn-outline-success" onclick="formbtn()" id="submit">Kaydet</button>
+            </div>
+       <!-- custom js -->
+       <script src="/js/app.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
